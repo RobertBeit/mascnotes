@@ -5,7 +5,7 @@ import React from 'react'
 
 const RequireAuth = ({allowedRoles}) => {
     const location = useLocation()
-    const {roles} = useAuth
+    const {roles} = useAuth()
     const content = (
         roles.some(role=> allowedRoles.inludes(role)) 
         ? <Outlet/>
